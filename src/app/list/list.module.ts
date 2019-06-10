@@ -13,7 +13,7 @@ import { ListPage } from './list.page';
     IonicModule,
     RouterModule.forChild([
       {
-        path: '',
+        path: '', 
         component: ListPage
       }
     ])

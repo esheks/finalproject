@@ -10,16 +10,42 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 })
 export class AppComponent {
   public appPages = [
+    // {
+    //   title: 'Login',
+    //   url: '/login',
+    //   icon: 'login'
+    // },
+    
     {
       title: 'Home',
       url: '/home',
       icon: 'home'
     },
+    // {
+    //   title: 'List',
+    //   url: '/list',
+    //   icon: 'list'
+    // },
     {
-      title: 'List',
-      url: '/list',
-      icon: 'list'
-    }
+      title: 'Task',
+      url: '/task',
+      icon: 'book'
+    },
+    {
+      title: 'Filter Task',
+      url: '/filtertask',
+      icon: 'funnel'
+    },
+    {
+      title: 'Progress',
+      url: '/progress',
+      icon: 'trending-up'
+    },
+    {
+      title: 'Summary',
+      url: '/summary',
+      icon: 'stats'
+    },
   ];
 
   constructor(

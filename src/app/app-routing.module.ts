@@ -2,8 +2,9 @@ import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
+  
   {
-    path: '',
+    path: 'home',
     redirectTo: 'home',
     pathMatch: 'full'
   },
@@ -11,10 +12,17 @@ const routes: Routes = [
     path: 'home',
     loadChildren: './home/home.module#HomePageModule'
   },
-  {
-    path: 'list',
-    loadChildren: './list/list.module#ListPageModule'
-  }
+  // {
+  //   path: 'list',
+  //   loadChildren: './list/list.module#ListPageModule'
+  // },
+  { path: 'login', loadChildren: './login/login.module#LoginPageModule' },
+  { path: 'homepage', loadChildren: './homepage/homepage.module#HomepagePageModule' },
+  { path: 'task', loadChildren: './task/task.module#TaskPageModule' },
+  { path: 'filtertask', loadChildren: './filtertask/filtertask.module#FiltertaskPageModule' },
+  { path: 'progress', loadChildren: './progress/progress.module#ProgressPageModule' },
+  { path: 'summary', loadChildren: './summary/summary.module#SummaryPageModule' },
+  { path: 'register', loadChildren: './register/register.module#RegisterPageModule' }
 ];
 
 @NgModule({

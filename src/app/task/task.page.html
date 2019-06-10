@@ -1,0 +1,56 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+          </ion-buttons>
+  
+    <ion-title>Task</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-item  >
+        <ion-label position="floating">Title</ion-label>
+        <ion-input ></ion-input>
+      </ion-item>
+    <ion-item>
+        <ion-label position="floating">Description</ion-label>
+        <ion-input></ion-input>
+      </ion-item>
+    <ion-item>
+        <ion-label position="floating">Due Date</ion-label>
+        <ion-input></ion-input>
+      </ion-item>
+    <ion-item>
+        <ion-label position="floating">Due Time</ion-label>
+        <ion-input></ion-input>
+      </ion-item>
+      <ion-item>
+          <ion-label position="floating">Priority</ion-label>
+          
+        <ion-select [(ngModel)]= "formdata.status">
+          <ion-select-option value ="high">High</ion-select-option>
+          <ion-select-option value ="medium">Medium</ion-select-option>
+          <ion-select-option value ="low">low</ion-select-option>
+        </ion-select>
+        </ion-item>
+    
+    
+    
+      <ion-item>
+        <ion-label position="floating">Category</ion-label>
+        <ion-input></ion-input>
+      </ion-item>
+      <ion-item>
+          <ion-label position="floating">Progress Level</ion-label>
+          
+        <ion-select [(ngModel)]= "formdata.status">
+          <ion-select-option value ="started">Started</ion-select-option>
+          <ion-select-option value ="not_done">Not Done</ion-select-option>
+          <ion-select-option value ="complete">Complete</ion-select-option>
+        </ion-select>
+        </ion-item>
+    
+      <ion-button>Update</ion-button>
+
+</ion-content>
