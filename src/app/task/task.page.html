@@ -7,28 +7,30 @@
     <ion-title>Task</ion-title>
   </ion-toolbar>
 </ion-header>
-
-<ion-content>
-    <ion-item  >
+<ion-content  >
+  
+    
+    <ion-item color="primary">
         <ion-label position="floating">Title</ion-label>
-        <ion-input ></ion-input>
+        <ion-input [(ngModel)] = "formdata.title"></ion-input>
       </ion-item>
-    <ion-item>
+    <ion-item color="primary">
         <ion-label position="floating">Description</ion-label>
-        <ion-input></ion-input>
+        <ion-input [(ngModel)] = "formdata.description"></ion-input>
       </ion-item>
-    <ion-item>
-        <ion-label position="floating">Due Date</ion-label>
-        <ion-input></ion-input>
+    <ion-item color="primary">
+        <!-- <ion-label position="floating">Due Date/Due Time</ion-label> -->
+        <ion-label position="floating">Due Date/Due Time(YYYY-MM-DD HH:mm:ss)</ion-label>
+        <ion-input  [(ngModel)] = "formdata.due_date"></ion-input>
+        <!-- <ion-datetime [(ngModel)] = "formdata.due_date" displayFormat="YYYY-MM-DD HH:mm:ss"min="2017-06-04" max="2027-08-23"  value="0000-00-00T00:00:00" ></ion-datetime> -->
       </ion-item>
-    <ion-item>
-        <ion-label position="floating">Due Time</ion-label>
-        <ion-input></ion-input>
-      </ion-item>
-      <ion-item>
+
+      
+    
+      <ion-item color="primary">
           <ion-label position="floating">Priority</ion-label>
           
-        <ion-select [(ngModel)]= "formdata.status">
+        <ion-select [(ngModel)]= "formdata.priority_level">
           <ion-select-option value ="high">High</ion-select-option>
           <ion-select-option value ="medium">Medium</ion-select-option>
           <ion-select-option value ="low">low</ion-select-option>
@@ -37,20 +39,22 @@
     
     
     
-      <ion-item>
+      <ion-item color="primary">
         <ion-label position="floating">Category</ion-label>
-        <ion-input></ion-input>
+        <ion-input [(ngModel)] = "formdata.category"></ion-input>
       </ion-item>
-      <ion-item>
-          <ion-label position="floating">Progress Level</ion-label>
-          
-        <ion-select [(ngModel)]= "formdata.status">
+      
+      <ion-item color="primary">
+          <ion-label position="floating">Progress Level</ion-label> 
+        <ion-select [(ngModel)]= "formdata.progress_level">
           <ion-select-option value ="started">Started</ion-select-option>
-          <ion-select-option value ="not_done">Not Done</ion-select-option>
+          <ion-select-option value ="not_started">Not Started</ion-select-option>
           <ion-select-option value ="complete">Complete</ion-select-option>
         </ion-select>
         </ion-item>
     
-      <ion-button>Update</ion-button>
+      <ion-button color="success" (click)="addTask()">Update</ion-button>
 
-</ion-content>
+    
+
+      </ion-content>

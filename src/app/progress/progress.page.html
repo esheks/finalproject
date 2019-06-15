@@ -9,5 +9,18 @@
 </ion-header>
 
 <ion-content>
+    <ion-card color="primary">
+        <ion-card-header>
+          <!-- <ion-card-subtitle>Card Subtitle</ion-card-subtitle> -->
+          <ion-card-title color="secondary">Task Progress</ion-card-title>
+        </ion-card-header>
+      
+        <ion-card-content>
+            <ion-list >
+                <ion-item *ngFor="let task of task"><ion-label>{{ task.title}}---{{ task.progress_level}}</ion-label></ion-item>
+                
+             </ion-list>
+        </ion-card-content>
+      </ion-card>
 
 </ion-content>

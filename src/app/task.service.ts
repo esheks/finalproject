@@ -22,18 +22,27 @@ export class TaskService {
   constructor(private http:HttpClient) {}
    //background to get data by announcing it
   getData(): Observable<any>{
-    return this.http.get(this.api_url);
+    var user = JSON.parse(localStorage.getItem("currentUser"));
+    return this.http.get(this.api_url + `/${user.user_id}`)// need to work with API
    }
 
    addItem(item): Observable<any>{
-     return this.http.post<any>(this.api_url, JSON.stringify(item),
+    var user = JSON.parse(localStorage.getItem("currentUser"));
+     return this.http.post<any>(this.api_url + `/${user.user_id}`, JSON.stringify(item),
      this.httpOptions);
    }
 
    //login
    login(username, password): Observable<any> {
-    return this.http.post<any>(this.api_url, JSON.stringify({username, password}), this.httpOptions);
+    var api_url = 'http://localhost:3000/api/login';
+    return this.http.post<any>(api_url, JSON.stringify({username, password}), this.httpOptions);
   }
+  //Register
+  register(data): Observable<any> {
+    var api_url = 'http://localhost:3000/api/register';
+    return this.http.post<any>(api_url, JSON.stringify(data), this.httpOptions);
+  }
+
  
   logout() {
     localStorage.removeItem('currentUser');

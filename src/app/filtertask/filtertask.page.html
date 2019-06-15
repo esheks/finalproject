@@ -1,5 +1,6 @@
-<ion-header>
-    <ion-toolbar>
+  
+  <ion-header >
+    <ion-toolbar >
     <ion-buttons slot="start">
         <ion-menu-button></ion-menu-button>
       </ion-buttons>
@@ -8,6 +9,17 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content >
+  <ion-card color="primary">
+    <ion-card-content>
+    <ion-list  >
+      
+        <ion-item *ngFor="let task of task"><ion-label>Title--{{ task.title}}, Category-- {{ task.category}},  Priority Level--{{ task.priority_level}},  Due Date--{{ task.due_date}}</ion-label></ion-item>
+        
+     </ion-list>
+    </ion-card-content>
+   
 
+  </ion-card>
+  <ion-button color="success" (click)="gotoAddTask()">Add Task</ion-button>
 </ion-content>

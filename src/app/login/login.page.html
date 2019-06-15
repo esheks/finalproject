@@ -1,31 +1,35 @@
-<ion-header>
-    <ion-toolbar>
+  
+  <ion-header color="primary" >
+    
     <ion-buttons slot="start">
         <ion-menu-button></ion-menu-button>
       </ion-buttons>
-  
+      <ion-toolbar >
     <ion-title>Login</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-    
+<ion-content >
   
-    
-        <ion-item class="form-group" >
-            <ion-label position="floating">user</ion-label>
-            <ion-input type="test" ></ion-input>
+  
+      
+        
+        <ion-item class="form-group" color="primary" >
+            <ion-label position="floating">username</ion-label>
+            <ion-input type="text"   [(ngModel)] = "username" ></ion-input>
             
           </ion-item >
-        <ion-item class="form-group">
+        <ion-item  class="form-group" color="primary">
             <ion-label position="floating">password</ion-label>
-            <ion-input type="password"></ion-input>
+            <ion-input type="password"  [(ngModel)] = "password"></ion-input>
           </ion-item>
         
-          <ion-button >Sign In</ion-button>
+          <ion-button color="success"  class="form-group" (click)="onSubmit()" >Sign In</ion-button>
 
-        
     
+      
+        
+        
     
     
 

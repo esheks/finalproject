@@ -26,6 +26,7 @@ export class AppComponent {
     //   url: '/list',
     //   icon: 'list'
     // },
+    
     {
       title: 'Task',
       url: '/task',
@@ -46,6 +47,12 @@ export class AppComponent {
       url: '/summary',
       icon: 'stats'
     },
+    {
+      title: 'Logout',
+      url: '/login',
+      icon: 'log-out'
+    },
+
   ];
 
   constructor(
