@@ -33,7 +33,7 @@ export class AppComponent {
       icon: 'book'
     },
     {
-      title: 'Filter Task',
+      title: 'All Task',
       url: '/filtertask',
       icon: 'funnel'
     },

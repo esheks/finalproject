@@ -1,0 +1,20 @@
+<ion-header >
+  <ion-toolbar >
+  <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+
+  <ion-title>category</ion-title>
+</ion-toolbar>
+</ion-header>
+
+<ion-content >
+<ion-card color="primary">
+  <ion-card-content>
+  <ion-list  >
+    
+      <ion-item *ngFor="let task of task"><ion-label>Title--{{ task.title}},  
+        Category--{{ task.category}}</ion-label></ion-item>
+      
+   </ion-list>
+  </ion-card-content>

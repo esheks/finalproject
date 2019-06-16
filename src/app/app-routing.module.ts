@@ -23,7 +23,10 @@ const routes: Routes = [
   { path: 'filtertask', loadChildren: './filtertask/filtertask.module#FiltertaskPageModule', canActivate: [AuthGuard] },
   { path: 'progress', loadChildren: './progress/progress.module#ProgressPageModule' , canActivate: [AuthGuard]},
   { path: 'summary', loadChildren: './summary/summary.module#SummaryPageModule', canActivate: [AuthGuard] },
-  { path: 'register', loadChildren: './register/register.module#RegisterPageModule' }
+  { path: 'register', loadChildren: './register/register.module#RegisterPageModule' },
+  { path: 'category', loadChildren: './category/category.module#CategoryPageModule' },
+  { path: 'priority', loadChildren: './priority/priority.module#PriorityPageModule' },
+  { path: 'date', loadChildren: './date/date.module#DatePageModule' }
 ];
 
 @NgModule({

@@ -20,12 +20,12 @@ export class TaskService {
   };
 
   constructor(private http:HttpClient) {}
-   //background to get data by announcing it
+   //background to get data by announcing it and getting task
   getData(): Observable<any>{
     var user = JSON.parse(localStorage.getItem("currentUser"));
     return this.http.get(this.api_url + `/${user.user_id}`)// need to work with API
    }
-
+   //posting task
    addItem(item): Observable<any>{
     var user = JSON.parse(localStorage.getItem("currentUser"));
      return this.http.post<any>(this.api_url + `/${user.user_id}`, JSON.stringify(item),
