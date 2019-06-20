@@ -18,9 +18,11 @@ export class TaskPage implements OnInit {
   ngOnInit() {
   }
 
-
+  // public myDate = new Date().toISOString();
+  
   addTask(){
     var self = this;
+   
   this.service.addItem(this.formdata).subscribe( function(result){
     self.showSuccessAlert();
 

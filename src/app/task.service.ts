@@ -25,12 +25,24 @@ export class TaskService {
     var user = JSON.parse(localStorage.getItem("currentUser"));
     return this.http.get(this.api_url + `/${user.user_id}`)// need to work with API
    }
+   
    //posting task
    addItem(item): Observable<any>{
     var user = JSON.parse(localStorage.getItem("currentUser"));
      return this.http.post<any>(this.api_url + `/${user.user_id}`, JSON.stringify(item),
      this.httpOptions);
    }
+   //getting task query
+   getFilter(item): Observable<any>{
+     console.log(item);
+    var user = JSON.parse(localStorage.getItem("currentUser"));    
+    var queryString = Object.keys(item).map(key=>key + "=" + item[key]).join('&');
+    console.log(queryString);
+    
+     return this.http.get<any>(this.api_url + `/filter/${user.user_id}` + '?' + queryString); 
+   }
+
+   
 
    //login
    login(username, password): Observable<any> {
