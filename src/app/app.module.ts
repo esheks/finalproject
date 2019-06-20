@@ -21,6 +21,7 @@ import { AppRoutingModule } from './app-routing.module';
     IonicModule.forRoot(),
     AppRoutingModule,
     HttpClientModule,
+   // ChartsModule,
     
 
   ],

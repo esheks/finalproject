@@ -26,7 +26,8 @@ const routes: Routes = [
   { path: 'register', loadChildren: './register/register.module#RegisterPageModule' },
   { path: 'category', loadChildren: './category/category.module#CategoryPageModule' },
   { path: 'priority', loadChildren: './priority/priority.module#PriorityPageModule' },
-  { path: 'date', loadChildren: './date/date.module#DatePageModule' }
+  { path: 'date', loadChildren: './date/date.module#DatePageModule' },
+  { path: 'tasks', loadChildren: './tasks/tasks.module#TasksPageModule' }
 ];
 
 @NgModule({

@@ -1,34 +1,42 @@
-<ion-header>
-    <ion-toolbar>
-        <ion-buttons slot="start">
-            <ion-menu-button></ion-menu-button>
-          </ion-buttons>
-  
-    <ion-title>Task</ion-title>
-  </ion-toolbar>
+<ion-header  >
+    <ion-toolbar color="success"  > 
+  <ion-buttons  slot="start">
+      <ion-menu-button ></ion-menu-button>
+      
+    </ion-buttons>
+    
+        
+  <ion-title >Add Task</ion-title>
+</ion-toolbar>
+
 </ion-header>
 <ion-content  >
   
     
-    <ion-item color="primary">
-        <ion-label position="floating">Title</ion-label>
+    <ion-item >
+        <ion-label position="stacked">Title</ion-label>
         <ion-input [(ngModel)] = "formdata.title"></ion-input>
       </ion-item>
-    <ion-item color="primary">
-        <ion-label position="floating">Description</ion-label>
+    
+      <ion-item >
+        <ion-label position="stacked">Description</ion-label>
         <ion-input [(ngModel)] = "formdata.description"></ion-input>
       </ion-item>
-    <ion-item color="primary">
-        <!-- <ion-label position="floating">Due Date/Due Time</ion-label> -->
-        <ion-label position="floating">Due Date/Due Time(YYYY-MM-DD HH:mm:ss)</ion-label>
-        <ion-input  [(ngModel)] = "formdata.due_date"></ion-input>
-        <!-- <ion-datetime [(ngModel)] = "formdata.due_date" displayFormat="YYYY-MM-DDTHH:mm:ss" min="2017-06-04" max="2027-08-23"  ></ion-datetime> -->
-      </ion-item>
+    
+      <ion-item >
+        <ion-label position="stacked">Due Date</ion-label>
+        <!-- <ion-label position="floating">Due Date/Due Time(YYYY-MM-DD HH:mm:ss)</ion-label> -->
+ <!-- <ion-input [(ngModel)] = "formdata.due_date"></ion-input> -->
 
+        <!-- <input type="datetime-local" [(ngModel)] = "formdata.due_date"></input> -->
+        <ion-datetime  displayFormat="YYYY-MM-DD" value="0000-00-00" [(ngModel)]="formdata.due_date" min="2019" max="2030"></ion-datetime> 
+    </ion-item>
+
+        
       
     
-      <ion-item color="primary">
-          <ion-label position="floating">Priority</ion-label>
+      <ion-item >
+          <ion-label position="stacked">Priority</ion-label>
           
         <ion-select [(ngModel)]= "formdata.priority_level">
           <ion-select-option value ="high">High</ion-select-option>
@@ -39,13 +47,18 @@
     
     
     
-      <ion-item color="primary">
-        <ion-label position="floating">Category</ion-label>
-        <ion-input [(ngModel)] = "formdata.category"></ion-input>
+      <ion-item >
+        <ion-label position="stacked">Category</ion-label>
+        <!-- <ion-input [(ngModel)] = "formdata.category"></ion-input> -->
+        <ion-select [(ngModel)]= "formdata.category">
+            <ion-select-option value ="one">One</ion-select-option>
+            <ion-select-option value ="two">Two</ion-select-option>
+            <ion-select-option value ="three">Three</ion-select-option>
+          </ion-select>
       </ion-item>
       
-      <ion-item color="primary">
-          <ion-label position="floating">Progress Level</ion-label> 
+      <ion-item >
+          <ion-label position="stacked">Progress Level</ion-label> 
         <ion-select [(ngModel)]= "formdata.progress_level">
           <ion-select-option value ="started">Started</ion-select-option>
           <ion-select-option value ="not_started">Not Started</ion-select-option>
@@ -53,7 +66,7 @@
         </ion-select>
         </ion-item>
     
-      <ion-button color="success" (click)="addTask()">Update</ion-button>
+      <ion-button color="success" expand="full"  (click)="addTask()">Submit</ion-button>
 
     
 

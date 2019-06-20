@@ -1,30 +1,69 @@
   
-  <ion-header color="primary" >
-    
-    <ion-buttons slot="start">
-        <ion-menu-button></ion-menu-button>
+  <ion-header  >
+      <ion-toolbar color="success"  > 
+    <ion-buttons  slot="start">
+        <ion-menu-button ></ion-menu-button>
+        
       </ion-buttons>
-      <ion-toolbar >
-    <ion-title>Login</ion-title>
+      
+          
+    <ion-title >Task Manager</ion-title>
   </ion-toolbar>
+  
 </ion-header>
 
-<ion-content >
+<ion-content   >
+    <ion-grid no-padding>
+  
+    
+    
+    <!-- <ion-card>
+    <h1 class="card-title">Task Manager</h1>
+    <img class="img-responsive" src="/assets/Main page 4.png"/> 
+  </ion-card>  -->
+
+  <ion-item class="form-group"  >
+      <ion-label position="stacked">username</ion-label>
+      <ion-input type="text"   [(ngModel)] = "username" ></ion-input>
+      
+    </ion-item >
+  <ion-item  class="form-group" >
+      <ion-label position="stacked">password</ion-label>
+      <ion-input type="password"  [(ngModel)] = "password"></ion-input>
+    </ion-item>
+  
+    <ion-button color="success" expand="full"  (click)="onSubmit()" >Sign In</ion-button>
+    <ion-button color="success" expand="full" (click)="signUp()" >Register</ion-button>
+  
+        <ion-row>
+          <ion-col no-padding>
+            <ion-img src="/assets/notepad2.jpg"></ion-img>
+          </ion-col>
+        </ion-row>
+    </ion-grid>
+  
+    <!-- <div  class="card-subtitletwo"><ion-button color="success" (click)="signIn()" >Sign In</ion-button></div>
+    <div  class="card-subtitleone"><ion-button color="success" (click)="signUp()" >Register</ion-button></div>
+   -->
+   
+
+
+
+
+
+
+
   
   
       
+  
         
-        <ion-item class="form-group" color="primary" >
-            <ion-label position="floating">username</ion-label>
-            <ion-input type="text"   [(ngModel)] = "username" ></ion-input>
+
+         
+
             
-          </ion-item >
-        <ion-item  class="form-group" color="primary">
-            <ion-label position="floating">password</ion-label>
-            <ion-input type="password"  [(ngModel)] = "password"></ion-input>
-          </ion-item>
-        
-          <ion-button color="success"  class="form-group" (click)="onSubmit()" >Sign In</ion-button>
+            
+          
 
     
       

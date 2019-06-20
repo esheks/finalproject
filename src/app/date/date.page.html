@@ -1,20 +1,19 @@
-<ion-header >
-  <ion-toolbar >
-  <ion-buttons slot="start">
-      <ion-menu-button></ion-menu-button>
-    </ion-buttons>
-
-  <ion-title>Due Date</ion-title>
-</ion-toolbar>
-</ion-header>
+<ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-back-button>Due Date</ion-back-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
 
 <ion-content >
 <ion-card color="primary">
   <ion-card-content>
   <ion-list  >
     
-      <ion-item *ngFor="let task of task"><ion-label>Title--{{ task.title}},  
-        Due Date--{{ task.due_date}}</ion-label></ion-item>
+      <ion-card color="primary"  *ngFor="let task of task">
+          {{ task.title}}.<br>   {{ task.due_date}}</ion-card> 
+          
       
    </ion-list>
   </ion-card-content>

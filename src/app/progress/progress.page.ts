@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NavController } from '@ionic/angular';
+import { NavController, AlertController } from '@ionic/angular';
 import { TaskService } from '../task.service';
 
 @Component({
@@ -9,8 +9,10 @@ import { TaskService } from '../task.service';
 })
 export class ProgressPage implements OnInit {
   task = [];
+  formdata = {};
 
-  constructor(private navCtrl:NavController, private service: TaskService) { }
+
+  constructor(private navCtrl:NavController, private service: TaskService, private alertController:AlertController) { }
 
   ngOnInit() {
     var self = this;
@@ -20,5 +22,39 @@ export class ProgressPage implements OnInit {
       self.task = data;
     });
   }
+//   updateTask(){
+//     var self = this;
+   
+//   this.service.addData(this.formdata).subscribe( function(result){
+//     self.showSuccessAlert();
+
+//   }, function (err) {
+//     console.log(err);
+//   });
+  
+
+  
+// }
+
+// async showSuccessAlert() {
+//   var self = this
+//   const alert = await this.alertController.create({
+//     header: 'Alert',
+
+//     message: 'The record was inserted successfully.',
+//     buttons: [{
+//       text:"ok",
+//       handler: function(){
+//         self.navCtrl.navigateForward("progress");
+//       }
+    
+//     }]
+//   });
+
+//   await alert.present();
+// }
+
 
 }
+
+

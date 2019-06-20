@@ -16,24 +16,25 @@ export class AppComponent {
     //   icon: 'login'
     // },
     
-    {
-      title: 'Home',
-      url: '/home',
-      icon: 'home'
-    },
     // {
-    //   title: 'List',
-    //   url: '/list',
-    //   icon: 'list'
+    //   title: 'Home',
+    //   url: '/home',
+    //   icon: 'home'
     // },
     
+    
     {
-      title: 'Task',
+      title: 'Add Task',
       url: '/task',
       icon: 'book'
     },
+    // {
+    //   title: 'All Tasks',
+    //   url: '/tasks',
+    //   icon: 'list'
+    // },
     {
-      title: 'All Task',
+      title: 'Filter Task',
       url: '/filtertask',
       icon: 'funnel'
     },
@@ -42,16 +43,18 @@ export class AppComponent {
       url: '/progress',
       icon: 'trending-up'
     },
+    // {
+    //   title: 'Summary',
+    //   url: '/summary',
+    //   icon: 'stats'
+    // },
     {
-      title: 'Summary',
-      url: '/summary',
-      icon: 'stats'
-    },
-    {
-      title: 'Logout',
+      title: 'Login/Logout',
       url: '/login',
       icon: 'log-out'
     },
+    
+    
 
   ];
 

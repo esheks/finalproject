@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { TaskService } from '../task.service';
-import { ToastController } from '@ionic/angular';
+import { ToastController, NavController } from '@ionic/angular';
 
 
 
@@ -24,7 +24,7 @@ export class LoginPage implements OnInit {
   
   
   constructor(private router:Router,
-    private authentication:TaskService, public toastController: ToastController, ) {
+    private authentication:TaskService, public toastController: ToastController, private navCtrl:NavController  ) {
    
     }
     
@@ -34,6 +34,10 @@ export class LoginPage implements OnInit {
   ngOnInit() {
     this.authentication.logout();
    }
+   
+   signUp(){
+    this.navCtrl.navigateForward('register');
+  }
   
 
   onSubmit()
