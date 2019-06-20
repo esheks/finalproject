@@ -59,7 +59,13 @@ export class TaskService {
   logout() {
     localStorage.removeItem('currentUser');
   }
- 
+  
+  //update task
+  update(data): Observable<any> {
+    let user = JSON.parse(localStorage.getItem("currentUser"));
+    return this.http.patch<any>(this.api_url + `/${user.user_id}`, JSON.stringify({idtask:data.task_id, progress_level:data.progress_level}));
+  }
+
  }
    
 

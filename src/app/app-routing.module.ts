@@ -27,8 +27,9 @@ const routes: Routes = [
   { path: 'category', loadChildren: './category/category.module#CategoryPageModule' },
   { path: 'priority', loadChildren: './priority/priority.module#PriorityPageModule' },
   { path: 'date', loadChildren: './date/date.module#DatePageModule' },
-  { path: 'tasks', loadChildren: './tasks/tasks.module#TasksPageModule' }
-];
+  { path: 'tasks', loadChildren: './tasks/tasks.module#TasksPageModule' },
+  { path: 'update', loadChildren: './update/update.module#UpdatePageModule' }];
+
 
 @NgModule({
   imports: [

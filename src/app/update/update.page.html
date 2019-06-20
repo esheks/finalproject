@@ -5,5 +5,23 @@
 </ion-header>
 
 <ion-content>
+    <ion-card *ngFor='let task of tasks'>
+      {{task.title}}
 
+
+              <select (click)="updateData(task)">
+                <option>Not Start</option>           
+                <option>Started</option>  
+
+              </select>
+              
+         
+      <!-- </ion-item>
+        </ion-list>-->
+    
+      </ion-card> 
+    
+  <!-- <ion-button (click)="updateData(data)">
+    Update
+  </ion-button> -->
 </ion-content>
