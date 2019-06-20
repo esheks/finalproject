@@ -4,23 +4,17 @@
             <ion-menu-button></ion-menu-button>
           </ion-buttons>
   
-    <ion-title>Progress</ion-title>
+    <ion-title>Task Progress</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-    <ion-card color="primary">
-        <ion-card-header>
-          <!-- <ion-card-subtitle>Card Subtitle</ion-card-subtitle> -->
-          <ion-card-title color="secondary">Task Progress</ion-card-title>
-        </ion-card-header>
-      
-        <ion-card-content>
-            <ion-list >
-                <ion-item *ngFor="let task of task"><ion-label>{{ task.title}}---{{ task.progress_level}}</ion-label></ion-item>
-                
-             </ion-list>
-        </ion-card-content>
-      </ion-card>
+  <ion-card *ngFor='let task of task'>
+    <ion-list>
+      <ion-label> Hello </ion-label>
+        <!-- <ion-label>{{ task.title}}:{{ task.progress_level}}</ion-label> -->
+    </ion-list>
+
+  </ion-card> 
 
 </ion-content>
