@@ -8,9 +8,10 @@ import { TaskService } from '../task.service';
   styleUrls: ['./progress.page.scss'],
 })
 export class ProgressPage implements OnInit {
-  task = [];
+  tasks = [];
   formdata = {};
-
+  
+  color_priority;
 
   constructor(private navCtrl:NavController, private service: TaskService, private alertController:AlertController) { }
 
@@ -19,42 +20,18 @@ export class ProgressPage implements OnInit {
     //getting data here using suscribe after announcing using the Observable 
     this.service.getData().subscribe(function(data){
       console.log(data);
-      self.task = data;
+      self.tasks = data;
     });
   }
-//   updateTask(){
-//     var self = this;
-   
-//   this.service.addData(this.formdata).subscribe( function(result){
-//     self.showSuccessAlert();
 
-//   }, function (err) {
-//     console.log(err);
-//   });
-  
-
-  
-// }
-
-// async showSuccessAlert() {
-//   var self = this
-//   const alert = await this.alertController.create({
-//     header: 'Alert',
-
-//     message: 'The record was inserted successfully.',
-//     buttons: [{
-//       text:"ok",
-//       handler: function(){
-//         self.navCtrl.navigateForward("progress");
-//       }
-    
-//     }]
-//   });
-
-//   await alert.present();
-// }
-
-
-}
-
+    changeColor(x:{priority_level:string}):string{
+      if (x.priority_level=="high"){return "LightCoral";}
+      else if (x.priority_level=="medium"){return "LightSkyBlue";}
+      else {return "LightYellow";}
+        }        
+      
+      updateLevel(){
+        this.navCtrl.navigateForward('update?')
+     }
+    }
 

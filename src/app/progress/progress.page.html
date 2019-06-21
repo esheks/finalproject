@@ -6,19 +6,24 @@
     </ion-buttons>
     
         
-  <ion-title >Progress</ion-title>
+  <ion-title>Tasks Progress</ion-title>
 </ion-toolbar>
 
 </ion-header>
 
-<ion-content >
-    
-        
-          <ion-card color="success"  *ngFor="let task of task">
-              {{ task.title}}.<br> {{ task.progress_level}}</ion-card> 
-              
-          
-       
+<ion-content>
+
+<ion-card *ngFor="let task of tasks" [ngStyle]="{'background-color': changeColor(task)}">
+{{ task.title }}.<br> {{ task.progress_level }}
+<br>
+</ion-card> 
+
+<br>
+<ion-button color="success" (click) = "updateLevel()" expand="full" >Click Here to Update Progress</ion-button> 
+</ion-content>
+
+
+
 
       <!-- <ion-item color="primary">
           <ion-label position="stacked">Progress Level</ion-label> 
@@ -31,7 +36,7 @@
     
       <ion-button color="success" expand="full"  (click)="updateTask()">Update</ion-button> -->
 
-      </ion-content>
+ 
 
       
     

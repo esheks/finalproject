@@ -10,8 +10,13 @@ export class UpdatePage implements OnInit {
    tasks:[];
    
   constructor(private service: TaskService) { }
-   updateData(data,data2){
-     this.service.update(data.id, data2);
+   updateData(data, event){
+    console.log(data);
+    this.service.update(data.idtask, event.target.value).subscribe((x)=>{
+      console.log(x);
+
+    });
+    // console.log(event.target.value);
    }
    
   ngOnInit() {

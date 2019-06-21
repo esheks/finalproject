@@ -1,27 +1,27 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>update</ion-title>
+  <ion-toolbar color="success">
+      <ion-title>Update</ion-title>
+      <br>
+      <ion-buttons slot="start">
+          <ion-back-button></ion-back-button>
+        </ion-buttons>
+        
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-    <ion-card *ngFor='let task of tasks'>
-      {{task.title}}
 
+<ion-card *ngFor='let task of tasks'>
+        
+    {{task.title}}
+    <br>
+<select (change)="updateData(task, $event)">
+  <option>Choose Update:</option>
+  <option>Not Started</option>           
+  <option>Started</option>  
+  <option>Completed</option> 
+</select>
 
-              <select (click)="updateData(task)">
-                <option>Not Start</option>           
-                <option>Started</option>  
-
-              </select>
-              
-         
-      <!-- </ion-item>
-        </ion-list>-->
+</ion-card> 
     
-      </ion-card> 
-    
-  <!-- <ion-button (click)="updateData(data)">
-    Update
-  </ion-button> -->
 </ion-content>
