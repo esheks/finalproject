@@ -25,6 +25,10 @@ export class TaskService {
     var user = JSON.parse(localStorage.getItem("currentUser"));
     return this.http.get(this.api_url + `/${user.user_id}`)// need to work with API
    }
+  
+   getTask(idtask): Observable<any>{
+    return this.http.get(this.api_url + `/details/${idtask}`)// need to work with API
+   }
    
    //posting task
    addItem(item): Observable<any>{
@@ -59,6 +63,17 @@ export class TaskService {
   logout() {
     localStorage.removeItem('currentUser');
   }
+
+  //update task 1
+  update(data, x): Observable<any> {
+    let user = JSON.parse(localStorage.getItem("currentUser"));
+    let api_url = 'http://localhost:3000/api/update';
+    return this.http.patch<any>(api_url + `/${user.user_id}`, JSON.stringify({idtask:data, progress_level:x}), this.httpOptions);
+
+  }//1
+
+ 
+
  
  }
    

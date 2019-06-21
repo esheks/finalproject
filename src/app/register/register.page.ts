@@ -27,11 +27,11 @@ export class RegisterPage implements OnInit {
   //click button to add data
   addRegiter(){
    //var disable = this;
-    //var toast = this;//declare toast error validation
+   // var toast = this;//declare toast error validation
     var self = this;//declare success validation
   this.service.register(this.formdata).subscribe( function(result){
     self.showSuccessAlert();//declare success validation
-  // toast.presentToast();//declare toast error validation
+   //toast.presentToast();//declare toast error validation
     //disable.buttondisable();//declare disable buuton
 
   }, function (err) {
@@ -60,7 +60,7 @@ async showSuccessAlert() {
   await alert.present();
 }
 
-//Toast error validation
+// //Toast error validation
 // async presentToast() {
 //   if(this.firstname==""){
 //     const toast = await this.toastController.create({

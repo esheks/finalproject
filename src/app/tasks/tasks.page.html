@@ -1,109 +1,40 @@
-<ion-header>
-    <ion-toolbar color="success" >
-      <ion-buttons slot="start">
-        <ion-back-button>All Task</ion-back-button>
-      </ion-buttons>
-    </ion-toolbar>
-  </ion-header>
+<ion-header  >
+  <ion-toolbar color="success"  > 
+<ion-buttons  slot="start">
+    <ion-menu-button ></ion-menu-button>
+    
+  </ion-buttons>
+  
+      
+<ion-title >All Task</ion-title>
+</ion-toolbar>
 
+</ion-header>
 
   
-<ion-content >
+<ion-content class="task_details">
   
-      <!-- <ion-card color="primary"  *ngFor="let task of task"><ion-label>Tittle-
-        </ion-label>  {{ task.title}}.<br><ion-label>Description-</ion-label>  {{ task.description}}.<br><ion-label>Due Date-</ion-label>  {{ task.due_date}}.<br><ion-label>Priority_level-</ion-label>  {{ task.priority_level}}.<br><ion-label>Category-</ion-label>   {{ task.category}}. <br><ion-label>Progress_level-</ion-label>  {{ task.progress_level}}.</ion-card>
-       -->
-      <ion-card color="success"  *ngFor="let task of task">
-         {{ task.title}}, {{ task.description}}, {{ task.due_date}},  {{ task.priority_level}}, {{ task.category}}, {{ task.progress_level}}.</ion-card>
+
+    <ion-card color="success" class= "filter"  *ngFor="let task of task" (click)="viewDetails(task)">
+      <div class="task_details">
+            <span class= "title">{{ task.title}}.</span> <br>
+          <ion-icon name="trending-up"></ion-icon>
+          {{ ProgressLevels[task.progress_level] }}. <br>
+          <ion-icon name="calendar"></ion-icon>
+         {{ task.due_date}}.<br>
+         <ion-icon name="arrow-forward"></ion-icon>
+         Click
+      </div>
+    </ion-card>
       
    
-  <!-- </ion-card-content> -->
   
-      <!-- <ion-grid>
-          <ion-row>
-            <ion-col>
-                <ion-button color="success" (click)="gotoCategory()" expand="full" >
-                  Filter Category
-                </ion-button>
-            </ion-col>
-          </ion-row>
-      
-        </ion-grid>   -->
 
         
 
 
 
-    <!-- <ion-grid>
-      <ion-row>
-    <ion-col>
-        <ion-button color="success" (click)="gotoPriority()" expand="full">
-        Filter  Priority level
-        </ion-button>
-    </ion-col>
-  </ion-row>
-  </ion-grid> 
     
-  <ion-grid>
-  <ion-row>
-  <ion-col>
-        <ion-button color="success" (click)="gotoDate()" expand="full">
-        Filter Due Date
-        </ion-button>
-    </ion-col>
-  </ion-row>
-  </ion-grid>  --> 
-
-  <!-- <ion-item >
-      <ion-label position="stacked">Category</ion-label>
-      <ion-input [(ngModel)] = "formdata.category"></ion-input>
-    </ion-item>
-  
-    <ion-item >
-      <ion-label position="stacked">Priority Level</ion-label>
-      <ion-input [(ngModel)] = "formdata.priority_level"></ion-input>
-    </ion-item>
-    <ion-item >
-      <ion-label position="stacked">Due Date</ion-label>
-      <ion-input [(ngModel)] = "formdata.due_date"></ion-input>
-    </ion-item>
-
-    <ion-button color="success" expand="full" >Filter</ion-button> -->
-
-
-
-
-    <!-- <ion-item >
-        <ion-label position="stacked">Category</ion-label>
-        <<ion-input [(ngModel)] = "formdata.category"></ion-input> -->
-        
-        <!-- <ion-select [(ngModel)]= "formdata.category">
-            <ion-select-option value ="one">One</ion-select-option>
-            <ion-select-option value ="two">Two</ion-select-option>
-            <ion-select-option value ="three">Three</ion-select-option>
-          </ion-select>
-      </ion-item>
-
-      <ion-item >
-          <ion-label position="stacked">Priority</ion-label>
-          
-        <ion-select [(ngModel)]= "formdata.priority_level">
-          <ion-select-option value ="high">High</ion-select-option>
-          <ion-select-option value ="medium">Medium</ion-select-option>
-          <ion-select-option value ="low">low</ion-select-option>
-        </ion-select>
-        </ion-item> 
-    
-      <ion-item >
-         
-          <ion-label position="stacked">Due Date</ion-label>
-          <ion-select [(ngModel)]= "formdata.due_date">
-          <ion-select-option value ="due_date">Due Date</ion-select-option>
-          </ion-select>
-      
-      </ion-item> -->
-       <!-- <ion-button color="success" (click) = "addFilter()" expand="full" >Filter</ion-button>  -->
-
    
     
  

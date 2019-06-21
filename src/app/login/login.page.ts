@@ -50,7 +50,7 @@ export class LoginPage implements OnInit {
     this.authentication.login(username, password).subscribe(data => {
       console.log(data);
       localStorage.setItem('currentUser', JSON.stringify(data));
-      this.router.navigate(['/task']);
+      this.router.navigate(['/tasks']);
     }, err => {
       this.error = err.error;
     })

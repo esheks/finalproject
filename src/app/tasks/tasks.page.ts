@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { TaskService } from '../task.service';
 import { ActivatedRoute } from '@angular/router';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-tasks',
@@ -9,8 +10,10 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class TasksPage implements OnInit {
 
-  constructor(private service: TaskService, private activatedRoute:ActivatedRoute) { }
-  task = []
+  constructor(private service: TaskService, private activatedRoute:ActivatedRoute, private navCtrl:NavController) { }
+  task = [];
+
+  ProgressLevels = {not_started: "Not Started", started:"Started", complete: "Complete"};
 
   ngOnInit() {
     var self = this;
@@ -22,5 +25,11 @@ export class TasksPage implements OnInit {
     });
 
   }
+
+  viewDetails(task){
+    console.log(task.idtask);
+    this.navCtrl.navigateForward("task-details/" + task.idtask);
+  }
+
 
 }
