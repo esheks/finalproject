@@ -29,7 +29,7 @@ const routes: Routes = [
   { path: 'date', loadChildren: './date/date.module#DatePageModule', canActivate: [AuthGuard] },
   { path: 'tasks', loadChildren: './tasks/tasks.module#TasksPageModule', canActivate: [AuthGuard] },
   { path: 'task-details/:id', loadChildren: './task-details/task-details.module#TaskDetailsPageModule', canActivate: [AuthGuard] },
-  { path: 'update', loadChildren: './update/update.module#UpdatePageModule' }
+  { path: 'update', loadChildren: './update/update.module#UpdatePageModule' , canActivate: [AuthGuard] }
 ];
 
 @NgModule({
