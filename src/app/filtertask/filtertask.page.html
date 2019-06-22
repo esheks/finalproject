@@ -11,21 +11,11 @@
   </ion-toolbar>
   
 </ion-header>
-  
+
   
        
           <ion-content >
-              <!-- <ion-card color="primary">
-                <ion-card-content>
-                <ion-list  >
-                  
-                    <ion-card color="primary"  *ngFor="let task of task">
-                        {{ task.title}}.<br>  {{ task.category}}</ion-card> 
-                    
-                    
-                 </ion-list>
-                </ion-card-content> -->
-  
+              <ion-grid no-padding>
                 <ion-item >
                     <ion-label position="stacked">Category</ion-label>
                     <!-- <ion-input [(ngModel)] = "formdata.category"></ion-input> -->
@@ -45,9 +35,22 @@
                       <ion-select-option value ="low">low</ion-select-option>
                     </ion-select>
                     </ion-item>
+
+                    <ion-item >
+                        <ion-label position="stacked">Due Date</ion-label>
+                        
+                        <ion-datetime  displayFormat="YYYY-MM-DD" value="0000-00-00" [(ngModel)]="formdata.due_date" min="2019" max="2030"></ion-datetime> 
+                    </ion-item>
                 
                   
                    <ion-button color="success" (click) = "addFilter()" expand="full" >Filter</ion-button> 
+
+                   <ion-row>
+                      <ion-col no-padding>
+                        <ion-img src="/assets/notepad2.jpg"></ion-img>
+                      </ion-col>
+                    </ion-row>
+                </ion-grid>
           
   
         

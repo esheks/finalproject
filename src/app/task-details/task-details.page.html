@@ -1,0 +1,21 @@
+
+<ion-header>
+    <ion-toolbar color="success">
+      <ion-buttons slot="start">
+        <ion-back-button>Task Details</ion-back-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+
+
+
+
+<ion-content>
+
+   <ion-card   class= "filter" color="success"  *ngIf="task">
+        <span class= "title">
+          {{ task.title}}</span> <br>
+          <div class="task_details" > {{ task.description}}. <br>
+         {{ task.due_date}}.<br>  {{ task.priority_level}}.<br> {{ task.category}}.<br> {{ ProgressLevels[task.progress_level] }}.</div>
+        </ion-card>
+</ion-content>

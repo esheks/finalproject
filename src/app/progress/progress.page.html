@@ -1,3 +1,4 @@
+<!-- 1 -->
 <ion-header  >
     <ion-toolbar color="success"  > 
   <ion-buttons  slot="start">
@@ -5,38 +6,20 @@
       
     </ion-buttons>
     
-        
-  <ion-title>Tasks Progress</ion-title>
+       
+  <ion-title>Tasks Progress/Priority Level</ion-title>
 </ion-toolbar>
 
 </ion-header>
 
 <ion-content>
 
-<ion-card *ngFor="let task of tasks" [ngStyle]="{'background-color': changeColor(task)}">
-{{ task.title }}.<br> {{ task.progress_level }}
-<br>
+<ion-card class="filter" *ngFor="let task of tasks" [ngStyle]="{'background-color': changeColor(task)}">
+<span class="title">{{ task.title }}.</span><br>
+ <ion-icon name="trending-up"></ion-icon>   {{ ProgressLevels[task.progress_level] }}<br>
+ <ion-icon name="trending-up"></ion-icon>  <span class="priority"> {{task.priority_level}}</span>
 </ion-card> 
 
 <br>
 <ion-button color="success" (click) = "updateLevel()" expand="full" >Click Here to Update Progress</ion-button> 
 </ion-content>
-
-
-
-
-      <!-- <ion-item color="primary">
-          <ion-label position="stacked">Progress Level</ion-label> 
-        <ion-select [(ngModel)]= "formdata.progress_level">
-          <ion-select-option value ="started">Started</ion-select-option>
-          <ion-select-option value ="not_started">Not Started</ion-select-option>
-          <ion-select-option value ="complete">Complete</ion-select-option>
-        </ion-select>
-        </ion-item>
-    
-      <ion-button color="success" expand="full"  (click)="updateTask()">Update</ion-button> -->
-
- 
-
-      
-    

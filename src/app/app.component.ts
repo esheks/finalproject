@@ -21,25 +21,25 @@ export class AppComponent {
     //   url: '/home',
     //   icon: 'home'
     // },
-    
+    {
+      title: 'All Tasks',
+      url: '/tasks',
+      icon: 'list'
+    },
     
     {
       title: 'Add Task',
       url: '/task',
       icon: 'book'
     },
-    // {
-    //   title: 'All Tasks',
-    //   url: '/tasks',
-    //   icon: 'list'
-    // },
+    
     {
       title: 'Filter Task',
       url: '/filtertask',
       icon: 'funnel'
     },
     {
-      title: 'Progress',
+      title: 'Progress/Priority Level',
       url: '/progress',
       icon: 'trending-up'
     },

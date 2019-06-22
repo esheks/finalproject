@@ -7,10 +7,11 @@ import { TaskService } from '../task.service';
   styleUrls: ['./update.page.scss'],
 })
 export class UpdatePage implements OnInit {
-   tasks:[];
-   
+  tasks:[];
+
   constructor(private service: TaskService) { }
-   updateData(data, event){
+
+  updateData(data, event){
     console.log(data);
     this.service.update(data.idtask, event.target.value).subscribe((x)=>{
       console.log(x);

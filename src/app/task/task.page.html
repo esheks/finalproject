@@ -25,10 +25,7 @@
     
       <ion-item >
         <ion-label position="stacked">Due Date</ion-label>
-        <!-- <ion-label position="floating">Due Date/Due Time(YYYY-MM-DD HH:mm:ss)</ion-label> -->
- <!-- <ion-input [(ngModel)] = "formdata.due_date"></ion-input> -->
-
-        <!-- <input type="datetime-local" [(ngModel)] = "formdata.due_date"></input> -->
+        
         <ion-datetime  displayFormat="YYYY-MM-DD" value="0000-00-00" [(ngModel)]="formdata.due_date" min="2019" max="2030"></ion-datetime> 
     </ion-item>
 
@@ -67,6 +64,7 @@
         </ion-item>
     
       <ion-button color="success" expand="full"  (click)="addTask()">Submit</ion-button>
+      <ion-img src="/assets/notepad2.jpg"></ion-img>
 
     
 
