@@ -15,12 +15,20 @@
         
     {{task.title}}
     <br>
-<select (change)="updateData(task, $event)">
+<!-- <select (change)="updateData(task, $event)">
   <option>Choose Update:</option>
   <option>Not Started</option>           
   <option>Started</option>  
   <option>Completed</option> 
-</select>
+</select> -->
+
+<select (change)="updateData(task, $event)">
+
+    <option>Choose Update:</option>
+    <option value ="not_started">Not Started</option>
+  <option value ="started" >Started</option>
+  <option value ="complete">Completed</option>
+ </select>
 
 </ion-card> 
     
