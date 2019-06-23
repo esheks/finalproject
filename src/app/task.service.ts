@@ -64,18 +64,14 @@ export class TaskService {
   logout() {
     localStorage.removeItem('currentUser');
   }
-
-  //update task 1
+  
+  //update task
   update(data, x): Observable<any> {
     let user = JSON.parse(localStorage.getItem("currentUser"));
     let api_url = 'http://localhost:3000/api/update';
     return this.http.patch<any>(api_url + `/${user.user_id}`, JSON.stringify({idtask:data, progress_level:x}), this.httpOptions);
+  }
 
-  }//1
-
- 
-
- 
  }
    
 

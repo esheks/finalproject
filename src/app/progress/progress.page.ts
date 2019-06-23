@@ -35,8 +35,8 @@ export class ProgressPage implements OnInit {
       updateLevel(){
         this.navCtrl.navigateForward('update?')
      }
-    }//1
 
+}
 
 
 
