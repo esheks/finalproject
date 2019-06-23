@@ -7,13 +7,20 @@
     </ion-buttons>
     
        
-  <ion-title>Tasks Progress/Priority Level</ion-title>
+  <ion-title>Tasks Progress</ion-title>
 </ion-toolbar>
 
 </ion-header>
 
 <ion-content>
-
+  
+    <!-- <P>Priority Level Color:</P> -->
+    <ion-item>
+      <ion-icon class="red" name="egg"></ion-icon><p>High</p><br>
+      <ion-icon class="yellow" name="egg"></ion-icon><p>Medium</p><br><br>
+      <ion-icon class="green" name="egg"></ion-icon><p>Low</p><br>
+ 
+ </ion-item>
 <ion-card class="filter" *ngFor="let task of tasks" [ngStyle]="{'background-color': changeColor(task)}">
 <span class="title">{{ task.title }}.</span><br>
  <ion-icon name="trending-up"></ion-icon>   {{ ProgressLevels[task.progress_level] }}<br>
@@ -21,5 +28,5 @@
 </ion-card> 
 
 <br>
-<ion-button color="success" (click) = "updateLevel()" expand="full" >Click Here to Update Progress</ion-button> 
+<ion-button color="success" (click) = "updateLevel()" expand="full" >Update Progress</ion-button> 
 </ion-content>
