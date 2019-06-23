@@ -1,45 +1,72 @@
 <ion-header  >
-    <ion-toolbar color="success"  > 
-        <ion-buttons slot="start">
-          <ion-menu-button></ion-menu-button>
-        </ion-buttons>
-  
-    <ion-title>Register</ion-title>
-  </ion-toolbar>
+  <ion-toolbar color="success"  > 
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+
+  <ion-title>Register</ion-title>
+</ion-toolbar>
 </ion-header>
 
 <ion-content  >
+  
+  <ion-item  >
+      <ion-label position="stacked">First Name</ion-label>
+      <ion-input [(ngModel)] = "formdata.firstname"></ion-input>
+    </ion-item>
+
+  <ion-item >
+      <ion-label position="stacked">Last Name</ion-label>
+      <ion-input [(ngModel)] = "formdata.lastname"></ion-input>
+    </ion-item>
+
+  <ion-item >
+      <ion-label position="stacked">email</ion-label>
+      <ion-input [(ngModel)] = "formdata.email" ></ion-input>
+    </ion-item>
+
+  <ion-item >
+      <ion-label position="stacked">username</ion-label>
+      <ion-input [(ngModel)] = "formdata.username"></ion-input>
+    </ion-item>
+
+  <ion-item >
+      <ion-label position="stacked">Password</ion-label>
+      <ion-input type="password" [(ngModel)] = "formdata.password"></ion-input>
+    </ion-item>
+  
+    <ion-button color="success" expand="full" (click)="addRegiter()">Sign up</ion-button>
+
     
-    <ion-item  >
-        <ion-label position="stacked">First Name</ion-label>
-        <ion-input [(ngModel)] = "formdata.firstname"></ion-input>
-      </ion-item>
-
-    <ion-item >
-        <ion-label position="stacked">Last Name</ion-label>
-        <ion-input [(ngModel)] = "formdata.lastname"></ion-input>
-      </ion-item>
-
-    <ion-item >
-        <ion-label position="stacked">email</ion-label>
-        <ion-input [(ngModel)] = "formdata.email" ></ion-input>
-      </ion-item>
-
-    <ion-item >
-        <ion-label position="stacked">username</ion-label>
-        <ion-input [(ngModel)] = "formdata.username"></ion-input>
-      </ion-item>
-
-    <ion-item >
-        <ion-label position="stacked">Password</ion-label>
-        <ion-input type="password" [(ngModel)] = "formdata.password"></ion-input>
-      </ion-item>
+    <ion-img src="/assets/notepad2.jpg"></ion-img>
     
-      <ion-button color="success" expand="full" (click)="addRegiter()">Sign up</ion-button>
-
-      
-      <ion-img src="/assets/notepad2.jpg"></ion-img>
-      
 
 
 </ion-content>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

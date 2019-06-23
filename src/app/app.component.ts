@@ -39,7 +39,7 @@ export class AppComponent {
       icon: 'funnel'
     },
     {
-      title: 'Progress/Priority Level',
+      title: 'Progress',
       url: '/progress',
       icon: 'trending-up'
     },

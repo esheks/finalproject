@@ -59,68 +59,31 @@ async showSuccessAlert() {
 
   await alert.present();
 }
-
-// //Toast error validation
-// async presentToast() {
-//   if(this.firstname==""){
-//     const toast = await this.toastController.create({
-//       message: 'firstname cannot be empty.',
-//       duration: 5000
-//     });
-//     toast.present();
-  
-  
-//   }
-//   else if(this.lastname==""){
-//     const toast = await this.toastController.create({
-//       message: 'lastname cannot be empty.',
-//       duration: 5000
-//     });
-//     toast.present();
-//   }
-//   else if(this.email==""){
-//     const toast = await this.toastController.create({
-//       message: 'email cannot be empty.',
-//       duration: 5000
-//     });
-//     toast.present();
-//   }
-//   else if(this.username==""){
-//     const toast = await this.toastController.create({
-//       message: 'username cannot be empty.',
-//       duration: 5000
-//     });
-//     toast.present();
-//   }
-//   else if(this.password==""){
-//     const toast = await this.toastController.create({
-//       message: 'password cannot be empty.',
-//       duration: 5000
-//     });
-//     toast.present();
-//   }
-
-
-
-  
-// }
-
-// buttondisable(){
-  
-//   if(this.firstname=="" && this.lastname=="" && this.email=="" && this.username=="" && this.password=="" )
-//   return this.isDisable=true;
-//   else{
-//       return this.isDisable=false;
-//   }
-  
-// };
-
-
-
-  
-    
-
-
-
-
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

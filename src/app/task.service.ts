@@ -26,6 +26,7 @@ export class TaskService {
     return this.http.get(this.api_url + `/${user.user_id}`)// need to work with API
    }
   
+   //getting task-details for one user
    getTask(idtask): Observable<any>{
     return this.http.get(this.api_url + `/details/${idtask}`)// need to work with API
    }
